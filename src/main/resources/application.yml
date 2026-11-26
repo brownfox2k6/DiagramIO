@@ -28,3 +28,15 @@ jwt:
   access-token-minutes: 15
   refresh-token-days: 7
 
+diagramio:
+  # Cờ bật/tắt từng chiến thuật Phase 2 (mặc định tắt để tái hiện baseline C0 khi đo ablation)
+  # Ghi đè bằng DIAGRAMIO_FEATURES_<FLAG>=true hoặc FEATURE_<FLAG>=true
+  features:
+    list-projection: ${FEATURE_LIST_PROJECTION:false}
+    read-cache: ${FEATURE_READ_CACHE:false}
+    share-token-cache: ${FEATURE_SHARE_TOKEN_CACHE:false}
+    etag: ${FEATURE_ETAG:false}
+    gzip: ${FEATURE_GZIP:false}
+    rate-limiting: ${FEATURE_RATE_LIMITING:false}
+    bcrypt-bulkhead: ${FEATURE_BCRYPT_BULKHEAD:false}
+
